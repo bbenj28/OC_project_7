@@ -71,7 +71,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `order` WRITE;
 /*!40000 ALTER TABLE `order` DISABLE KEYS */;
-INSERT INTO `order` VALUES (1,2,1,1,5,5,'2020-12-11 17:30:01','2020-12-11 20:30:00',1,'Le code d\'entrée est 8897'),(2,4,2,1,1,6,'2020-12-11 18:45:02','2020-12-11 20:00:00',0,NULL),(3,4,3,1,7,7,'2020-12-11 16:28:03','2020-12-11 20:00:00',1,NULL),(4,2,4,2,12,12,'2020-12-11 20:08:04','2020-12-11 20:30:00',0,NULL),(5,4,5,2,8,13,'2020-12-11 18:10:05','2020-12-11 20:00:00',0,NULL),(6,4,6,2,14,14,'2020-12-11 19:30:06','2020-12-11 20:00:00',1,'Le code est 55435'),(7,2,7,3,19,19,'2020-12-11 17:40:07','2020-12-11 20:30:00',1,NULL),(8,4,8,3,15,20,'2020-12-11 10:24:08','2020-12-11 20:00:00',1,NULL),(9,4,9,3,21,21,'2020-12-11 18:34:09','2020-12-11 20:00:00',0,NULL);
+INSERT INTO `order` VALUES (1,2,1,1,5,5,1,'2020-12-11 17:30:01','2020-12-11 20:30:00',1,'Le code d\'entrée est 8897'),(2,4,2,1,1,6,2,'2020-12-11 18:45:02','2020-12-11 20:00:00',0,NULL),(3,4,3,1,7,7,3,'2020-12-11 16:28:03','2020-12-11 20:00:00',1,NULL),(4,2,4,2,12,12,4,'2020-12-11 20:08:04','2020-12-11 20:30:00',0,NULL),(5,4,5,2,8,13,5,'2020-12-11 18:10:05','2020-12-11 20:00:00',0,NULL),(6,4,6,2,14,14,6,'2020-12-11 19:30:06','2020-12-11 20:00:00',1,'Le code est 55435'),(7,2,7,3,19,19,7,'2020-12-11 17:40:07','2020-12-11 20:30:00',1,NULL),(8,4,8,3,15,20,8,'2020-12-11 10:24:08','2020-12-11 20:00:00',1,NULL),(9,4,9,3,21,21,9,'2020-12-11 18:34:09','2020-12-11 20:00:00',0,NULL);
 /*!40000 ALTER TABLE `order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -111,7 +111,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `pizzeria_member` WRITE;
 /*!40000 ALTER TABLE `pizzeria_member` DISABLE KEYS */;
-INSERT INTO `pizzeria_member` VALUES (1,1,1,'Riel','Solaine','s.riel@gmail.com','0675432123',2,'conclu le 5 décembre 2014',1),(2,1,2,'Peltier','Alphonse','a.peltier@yahoo.fr','0685358757',3,'conclu le 8 novembre 2017',2),(3,1,3,'Texier','Thomas','t.tex33@hotmail.fr','0656789944',4,'conclu le 14 juin 2010',3),(4,2,1,'Remy','Gilbert','g.remy@gmail.com','0674573589',9,'conclu le 10 avril 2013',4),(5,2,2,'du Germain','Monique','mdg78@msn.com','0698855779',10,'conclu le 5 mai 2016',5),(6,2,3,'Grondin','Luc','lgrondin@gmail.com','0688537893',11,'conclu le 23 janvier 2015',6),(7,3,1,'Meyer','Sophie','smeyer@msn.com','0633567896',16,'conclu le 11 février 2018',7),(8,3,2,'Voitin','Roland','rolandvoitin@hotmail.fr','0634589427',17,'conclu le 10 novembre 2019',8),(9,3,3,'Delorme','Anaïs','a.delorme@gmail.com','0642246886',18,'conclu le 22 septembre 2019',9);
+INSERT INTO `pizzeria_member` VALUES (1,1,1,'Riel','Solaine','s.riel@gmail.com','0675432123',2,'conclu le 5 décembre 2014'),(2,1,2,'Peltier','Alphonse','a.peltier@yahoo.fr','0685358757',3,'conclu le 8 novembre 2017'),(3,1,3,'Texier','Thomas','t.tex33@hotmail.fr','0656789944',4,'conclu le 14 juin 2010'),(4,2,1,'Remy','Gilbert','g.remy@gmail.com','0674573589',9,'conclu le 10 avril 2013'),(5,2,2,'du Germain','Monique','mdg78@msn.com','0698855779',10,'conclu le 5 mai 2016'),(6,2,3,'Grondin','Luc','lgrondin@gmail.com','0688537893',11,'conclu le 23 janvier 2015'),(7,3,1,'Meyer','Sophie','smeyer@msn.com','0633567896',16,'conclu le 11 février 2018'),(8,3,2,'Voitin','Roland','rolandvoitin@hotmail.fr','0634589427',17,'conclu le 10 novembre 2019'),(9,3,3,'Delorme','Anaïs','a.delorme@gmail.com','0642246886',18,'conclu le 22 septembre 2019');
 /*!40000 ALTER TABLE `pizzeria_member` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -154,4 +154,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-11 15:25:37
+-- Dump completed on 2021-01-26 15:02:10

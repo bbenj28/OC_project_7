@@ -119,6 +119,7 @@ CREATE TABLE `order` (
   `pizzeria_id` int NOT NULL,
   `delivery_address_id` int NOT NULL,
   `billing_address_id` int NOT NULL,
+  `member_id` int NOT NULL,
   `order_date` datetime NOT NULL,
   `delivery_date` datetime NOT NULL,
   `payed` tinyint NOT NULL DEFAULT '0',
@@ -128,9 +129,11 @@ CREATE TABLE `order` (
   KEY `pizzeria_id_order_idx` (`pizzeria_id`),
   KEY `delivery_address_id_idx` (`delivery_address_id`),
   KEY `billing_address_id_idx` (`billing_address_id`),
+  KEY `member_id_idx` (`member_id`),
   CONSTRAINT `billing_address_id` FOREIGN KEY (`billing_address_id`) REFERENCES `address` (`id`),
   CONSTRAINT `customer_id_order` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`),
   CONSTRAINT `delivery_address_id` FOREIGN KEY (`delivery_address_id`) REFERENCES `address` (`id`),
+  CONSTRAINT `member_id_order` FOREIGN KEY (`member_id`) REFERENCES `pizzeria_member` (`id`),
   CONSTRAINT `pizzeria_id_order` FOREIGN KEY (`pizzeria_id`) REFERENCES `pizzeria` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -211,14 +214,11 @@ CREATE TABLE `pizzeria_member` (
   `phone` varchar(20) NOT NULL,
   `address_id` int NOT NULL,
   `contract_infos` varchar(500) NOT NULL,
-  `order_id_to_do` int DEFAULT NULL,
   PRIMARY KEY (`id`,`pizzeria_id`,`role_id`),
   KEY `pizzeria_id_member_idx` (`pizzeria_id`),
   KEY `role_id_member_idx` (`role_id`),
-  KEY `orders_id_member_idx` (`order_id_to_do`),
   KEY `address_id_member_idx` (`address_id`),
   CONSTRAINT `address_id_member` FOREIGN KEY (`address_id`) REFERENCES `address` (`id`),
-  CONSTRAINT `orders_id_member` FOREIGN KEY (`order_id_to_do`) REFERENCES `order` (`id`),
   CONSTRAINT `pizzeria_id_member` FOREIGN KEY (`pizzeria_id`) REFERENCES `pizzeria` (`id`),
   CONSTRAINT `role_id_member` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -283,4 +283,4 @@ CREATE TABLE `working_day` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-11 15:25:52
+-- Dump completed on 2021-01-26 15:03:51
